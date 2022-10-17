@@ -5,12 +5,13 @@
 //
 // **************************************************************
 
-function isValidCreditCardNumber(num)
-{
-    // Not a number or not 16 digits long: it is not a creditcard number;
+function isValidCreditCardNumber(num /* string */)
+{ // it will be string because input fields send string
+	
+    // Not a number and 16 digits long: it ia a creditcard number;
     // you have to sanitize it before this. Get rid of spaces and stuff
     // people type in (or do not let them type it in in the first place
-    if(num.length != 16 || isNaN(num)) {return false;}
+    if(num.length != 16) {return false;}
    
     // Hans Peter Luhn algorithm
     for(var digits = num.split('').map(Number), i = 14; i >= 0; i -= 2)
