@@ -4,6 +4,9 @@
    At first I just wanted to generate the correct issiis... types parameter value, for bind_param.
    Then I realised I could make it into a function.
    Also, I did not think much about it, it worked in my case, please test it properly.
+   
+   Also this is not a good idea to do.
+ 
 */
 
 function fillBindParam($params = array(),&$statement)
