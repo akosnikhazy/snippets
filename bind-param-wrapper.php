@@ -11,21 +11,21 @@ function fillBindParam($params = array(),&$statement)
 	foreach($params as $para)
 	{
     
-		switch(gettype($para))
-		{
+	   switch(gettype($para))
+	   {
 		  case 'integer':
-        $types .= 'i';
-				break;
-			case 'double':
-			case 'float':
-				$types .= 'd';
-				break;
-      case 'string':
-				$types .= 's';
-				break;
-			default:
-				$types .= 'b';
-		}
+                       $types .= 'i';
+			break;
+		  case 'double':
+		  case 'float':
+			$types .= 'd';
+			break;
+                  case 'string':
+			$types .= 's';
+			break;
+		  default:
+		        $types .= 'b';
+	   }
 	}
 
 	$statement->bind_param($types,...$params);
