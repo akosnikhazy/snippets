@@ -19,7 +19,7 @@
 *       `date` datetime NOT NULL DEFAULT current_timestamp()
 *     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 *
-*  -Alternativally you can rewrite it so it saves a textfile wiht the data.
+*  -Alternativally you can comment out the mysql part and use the csv file line
 */
 function getUserIP()
 {
@@ -90,7 +90,11 @@ function getUserAgentData() {
 /* grab data */
 $data = getUserAgentData();
 
-/* save data */
+/* save data to csv file */
+/* use this if you want to use a csv file as output insted of database */
+// file_put_contents('data.csv', '"' . implode('";"',array(getUserIP(),$data['OS'],$data['browser'],$_SERVER['HTTP_USER_AGENT'])). '"' . PHP_EOL, FILE_APPEND);
+
+/* save data to mysql table */
 $conn = new mysqli("localhost",'','','');
 
 $sql = 'INSERT INTO ip (ip,OS,browser,uagent)
