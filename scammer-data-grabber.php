@@ -46,7 +46,7 @@ function getUserAgentData() {
 		'/windows nt 5.2/i'     =>  'Windows Server 2003/XP x64',
 		'/windows nt 5.1/i'     =>  'Windows XP',
 		'/windows xp/i'         =>  'Windows XP',
-    '/windows nt 5.0/i'     =>  'Windows 2000',
+		'/windows nt 5.0/i'     =>  'Windows 2000',
 		'/macintosh|mac os x/i' =>  'Mac OS X',
 		'/mac_powerpc/i'        =>  'Mac OS 9',
 		'/iphone/i'             =>  'iPhone',
@@ -55,14 +55,14 @@ function getUserAgentData() {
 		'/android/i'            =>  'Android',
 		'/blackberry/i'         =>  'BlackBerry',
 		'/webos/i'              =>  'mobile device',
-    '/linux/i'              =>  'Linux',
+		'/linux/i'              =>  'Linux',
 		'/ubuntu/i'             =>  'Ubuntu'
 	);
 	
 	$browser_array  = array(
 		'/msie/i'       =>  'Internet Explorer',
 		'/firefox/i'    =>  'Firefox',
-    '/chrome/i'     =>  'Chromium based',
+		'/chrome/i'     =>  'Chromium based',
 		'/safari/i'     =>  'Safari',
 		'/edge/i'       =>  'Edge (old)',
 		'/opera/i'      =>  'Opera',
@@ -94,7 +94,7 @@ $data = getUserAgentData();
 $conn = new mysqli("localhost",'','','');
 
 $sql = 'INSERT INTO ip (ip,OS,browser,uagent)
-		VALUES ("' . getUserIP() . '","' . $data['OS'] . '","' . $data['browser'] . '","' . $_SERVER['HTTP_USER_AGENT'] . '")';
+	VALUES ("' . getUserIP() . '","' . $data['OS'] . '","' . $data['browser'] . '","' . $_SERVER['HTTP_USER_AGENT'] . '")';
 
 $conn->query($sql);
  
