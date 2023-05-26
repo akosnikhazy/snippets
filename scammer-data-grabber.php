@@ -27,7 +27,7 @@ function getUserIP()
     if(filter_var( @$_SERVER['HTTP_CLIENT_IP'], FILTER_VALIDATE_IP))
         return  @$_SERVER['HTTP_CLIENT_IP'];
  
-	  if(filter_var( @$_SERVER['HTTP_X_FORWARDED_FOR'], FILTER_VALIDATE_IP))
+    if(filter_var( @$_SERVER['HTTP_X_FORWARDED_FOR'], FILTER_VALIDATE_IP))
         return @$_SERVER['HTTP_X_FORWARDED_FOR'];
     
     return $_SERVER['REMOTE_ADDR'];
