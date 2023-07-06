@@ -1,0 +1,38 @@
+<dialog id="dialog">
+
+	<div id="t"></div>
+	
+	<form method="dialog">
+	  <!-- by setting the method dialog the submit button will close the dialog -->
+		<input type="submit" value="Close">
+		
+	</form>
+	
+</dialog>
+
+<input type="text" id="dialogtext" placeholder="dialog text"> <button id="show">Show Dialog</button>
+
+<script>
+
+	function dialogShow(t){
+    /* 
+      You can display the <dialog> HTML tag with .showModal() or .show()
+      You can set everything about it before displaying it with
+      Javascript and CSS
+    */
+		let dialog = document.getElementById("dialog");
+		let text = document.getElementById("t");
+		
+		text.innerHTML = t;
+		
+		dialog.showModal();
+	}
+
+	document.getElementById("show").addEventListener("click",function(){
+
+		let dialogText = document.getElementById("dialogtext").value
+
+		dialogShow(dialogText);
+	});
+
+</script>
