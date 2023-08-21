@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Flex is fun</title>
+	<style>
+		/* flex stuff */
+		
+			#flexingflex{ 
+				/* these 3 lines pur rhw articles in this div in to a grid */
+				display:flex;
+				flex-wrap:wrap;
+
+				/* if the screen is smaller than 800 it will make the articles in a column */
+				max-width: 800px;
+				margin:0 auto;
+			}
+			
+		/* everything else, making the example nice */
+		html{
+			background:#55aa81;
+			font-family:Helvetica;
+			text-align: justify;
+			font-size: 13px;
+		}
+		article{	
+			border: 2px solid #99667f;
+			margin-right: 5px;
+			margin-bottom:5px;
+			padding: 10px;
+			background: #aa557e;
+			color: #fefefe;
+			width: 350px;
+			-webkit-border-radius: 5px 5px 5px 5px;
+			border-radius: 5px 5px 5px 5px;
+		}
+		article span{
+			font-size: 12px;
+		}
+	</style>
+  </head>
+
+  <body>
+    <div id="flexingflex">
+		
+		<article>
+			<span>2023-08-23 - Author</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at vulputate mauris, eget tempor est. Quisque elementum velit ut dolor fermentum dignissim. Ut a sapien ut nulla dignissim mattis. In bibendum finibus metus, non molestie odio sagittis eget. Proin eget tempor eros. Pellentesque et aliquam augue. Quisque nunc metus, tristique ac cursus id, dapibus sed metus. Maecenas in finibus urna. Curabitur interdum sem sit amet sem imperdiet finibus. Quisque tincidunt, quam eget vulputate laoreet, purus ipsum bibendum libero, nec fringilla metus tellus in ipsum. Morbi vel hendrerit turpis. Curabitur iaculis ex vitae tincidunt pulvinar. Aenean consectetur feugiat magna in pharetra. Quisque ut luctus nisl, a aliquam orci. Vivamus nulla lectus, lacinia ultrices fermentum nec, fringilla sed enim. In vitae magna enim.</p>
+			<p>Sed nec ornare ante, vitae ultricies diam. Sed fringilla lorem diam, nec bibendum lectus aliquet a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices a quam ut blandit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque quis mi iaculis purus mattis suscipit sit amet et arcu. Duis feugiat efficitur posuere. Proin varius, risus ut pulvinar tincidunt, libero nibh semper eros, vitae imperdiet ex risus ac quam. Aliquam id purus in urna dapibus porttitor nec id neque. Pellentesque lectus quam, interdum sit amet volutpat ut, scelerisque a velit. Nullam ante magna, elementum eget dolor eu, varius convallis dolor. Integer turpis nibh, vehicula sit amet ex nec, imperdiet eleifend massa. Vestibulum mattis leo quis egestas hendrerit.</p> 
+		</article>
+		<article>
+			<span>2023-08-20 - Author</span>
+			<p>Cras tristique, est sed vestibulum commodo, nunc purus sollicitudin neque, nec consequat elit tellus sed leo. Vivamus sodales porta faucibus. Nunc vulputate, ligula eget lobortis egestas, urna turpis condimentum enim, et fringilla turpis dolor et sem. Nullam nec pharetra odio. Ut accumsan sollicitudin leo rutrum placerat. Sed lobortis justo nec justo porta consectetur. Pellentesque ut massa et nisl condimentum accumsan. Ut vulputate varius posuere. In tincidunt convallis posuere. </p> 
+		</article>
+		<article>
+			<span>2023-08-19 - Author</span>
+			<p>In congue lectus turpis. Vivamus euismod ex vel mi pretium sodales. Curabitur faucibus congue metus nec laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio justo, euismod nec odio non, interdum tincidunt elit. Etiam convallis dignissim ante, ac tincidunt felis gravida sit amet. Sed at eleifend felis. Suspendisse ultrices sed ligula id vulputate. Quisque et ultricies quam. Maecenas sed suscipit purus, ac ullamcorper mauris. Cras elementum lacus nec dui congue tempor. Etiam hendrerit velit tortor, at lacinia mauris pulvinar vel. Aliquam tincidunt risus odio, a consectetur elit commodo ac. </p> 
+		</article>
+		<article>
+			<span>2023-08-18 - Author</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at vulputate mauris, eget tempor est. Quisque elementum velit ut dolor fermentum dignissim. Ut a sapien ut nulla dignissim mattis. In bibendum finibus metus, non molestie odio sagittis eget. Proin eget tempor eros. Pellentesque et aliquam augue. Quisque nunc metus, tristique ac cursus id, dapibus sed metus. Maecenas in finibus urna. Curabitur interdum sem sit amet sem imperdiet finibus. Quisque tincidunt, quam eget vulputate laoreet, purus ipsum bibendum libero, nec fringilla metus tellus in ipsum. Morbi vel hendrerit turpis. Curabitur iaculis ex vitae tincidunt pulvinar. Aenean consectetur feugiat magna in pharetra. Quisque ut luctus nisl, a aliquam orci. Vivamus nulla lectus, lacinia ultrices fermentum nec, fringilla sed enim. In vitae magna enim.</p>
+			<p>Sed nec ornare ante, vitae ultricies diam. Sed fringilla lorem diam, nec bibendum lectus aliquet a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices a quam ut blandit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque quis mi iaculis purus mattis suscipit sit amet et arcu. Duis feugiat efficitur posuere. Proin varius, risus ut pulvinar tincidunt, libero nibh semper eros, vitae imperdiet ex risus ac quam. Aliquam id purus in urna dapibus porttitor nec id neque. Pellentesque lectus quam, interdum sit amet volutpat ut, scelerisque a velit. Nullam ante magna, elementum eget dolor eu, varius convallis dolor. Integer turpis nibh, vehicula sit amet ex nec, imperdiet eleifend massa. Vestibulum mattis leo quis egestas hendrerit.</p> 
+			<p>In congue lectus turpis. Vivamus euismod ex vel mi pretium sodales. Curabitur faucibus congue metus nec laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio justo, euismod nec odio non, interdum tincidunt elit. Etiam convallis dignissim ante, ac tincidunt felis gravida sit amet. Sed at eleifend felis. Suspendisse ultrices sed ligula id vulputate. Quisque et ultricies quam. Maecenas sed suscipit purus, ac ullamcorper mauris. Cras elementum lacus nec dui congue tempor. Etiam hendrerit velit tortor, at lacinia mauris pulvinar vel. Aliquam tincidunt risus odio, a consectetur elit commodo ac. </p> 
+		</article>
+		
+	</div>
+  </body>
+</html>
