@@ -6,7 +6,7 @@ SuperDuperEncrypter.class.php a class
 
 A very simple wrapper for openssl encryption with
 two layer encryption outputting one iv value
-tahta contains two ivs.
+that contains two ivs in one. Easier to keep.
 ***********************/
 class SuperDuperEncrypter{
 	
