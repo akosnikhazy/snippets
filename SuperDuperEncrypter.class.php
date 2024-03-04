@@ -40,8 +40,8 @@ class SuperDuperEncrypter{
 		$iv2	 = hex2bin($iv2hex);
 		
 		return openssl_decrypt(
-							   openssl_decrypt($data, $this->cipher2, hash('sha256',$key.$iv1hex), 0, $iv2), 
-							   $this->cipher1,hash('sha256',$iv2hex.$key).$key, 0, $iv1);
+					openssl_decrypt($data, $this->cipher2, hash('sha256',$key.$iv1hex), 0, $iv2), 
+					$this->cipher1,hash('sha256',$iv2hex.$key).$key, 0, $iv1);
 		
 	}
 	
