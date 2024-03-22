@@ -29,8 +29,8 @@ xhr.onload = function () {
     // if deviantart says success: go to the next one 
     document.querySelectorAll('a._1Hru3.E7EQn.aToGy._2OXCK')[1].click();
 	 // this one works on groups if you are on the https://www.deviantart.com/groups/[GROUPNAME]/deviations
-    // page. It is not as good as for profile but faster than opening all the groups to unwatch.
-    //  document.querySelectorAll('div._23Yz-._19Ez7')[0].click();
+    // page. It is not as good as for profile but faster than opening all the groups to unwatch. The random makes it faster
+    //   document.querySelectorAll('div._23Yz-._19Ez7')[(Math.floor(Math.random() * (5 - 1 + 1) + 1))].click();
   }
 };
 
