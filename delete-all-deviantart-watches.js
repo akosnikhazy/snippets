@@ -28,7 +28,9 @@ xhr.onload = function () {
   if (JSON.parse(xhr.responseText).success === true) {
     // if deviantart says success: go to the next one 
     document.querySelectorAll('a._1Hru3.E7EQn.aToGy._2OXCK')[1].click();
-	
+	 // this one works on groups if you are on the https://www.deviantart.com/groups/[GROUPNAME]/deviations
+    // page. It is not as good as for profile but faster than opening all the groups to unwatch.
+    //  document.querySelectorAll('div._23Yz-._19Ez7')[0].click();
   }
 };
 
@@ -37,4 +39,3 @@ xhr.send(jsonData = JSON.stringify({
   "csrf_token": window.__CSRF_TOKEN__, // deviantart is kind enough to provide this globally
   "da_minor_version": 20230710 // might change in the future
 }));
-
