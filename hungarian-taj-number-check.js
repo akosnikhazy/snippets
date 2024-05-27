@@ -4,6 +4,8 @@
 * "A TAJ szám első nyolc számjegyéből a páratlan helyen állókat hárommal, a páros 
 * helyen állókat héttel szorozzuk, és a szorzatokat összeadjuk. Az összeget tízzel 
 * elosztva a maradékot tekintjük a kilencedik, azaz CDV kódnak."
+*
+* https://net.jogtar.hu/jogszabaly?docid=99600020.tv#pr436id
 ************************************************************************************/
 function isValidTAJ(taj) {
 
