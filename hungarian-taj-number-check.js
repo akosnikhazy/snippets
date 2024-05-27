@@ -15,7 +15,7 @@ function isValidTAJ(taj) {
 	if(!/^\d+$/.test(TAJStr)) return false; // ha nem minden karakter szám itt meg is állunk
 	
 	// check digit verification érték a TAJ szám utolsó számjegy
-	var CDV = parseInt(TAJStr.substring(TAJStr.length - 1));
+	var CDV = parseInt(TAJStr.substring(TAJStr.length - 1),10);
 	
 	// a számok, amikkel dolgozunk
 	var TAJNums = TAJStr.slice(0,-1);
@@ -23,13 +23,11 @@ function isValidTAJ(taj) {
 	// itt végezzük al az összeadásokat
 	var sum = 0;	
 	TAJNums.split('').forEach(function(digit,index){
-		sum += parseInt(digit) * ((index&1)?3:7);
+		sum += parseInt(digit,10) * ((index&1)?3:7);
 	});
 	
 	// ellenőrzés
-	if(CDV != 10-sum%10) return false;
-	
+	if(CDV !== 10-sum%10) return false;
 	
 	return true;
-	
 }
