@@ -5,7 +5,7 @@
 * helyen állókat héttel szorozzuk, és a szorzatokat összeadjuk. Az összeget tízzel 
 * elosztva a maradékot tekintjük a kilencedik, azaz CDV kódnak."
 ************************************************************************************/
-function TAJ(taj) {
+function isValidTAJ(taj) {
 
 	// így int és string is működik, cserébe később parseInt-elni is kell
 	var TAJStr = taj.toString().padStart(9, '0');
