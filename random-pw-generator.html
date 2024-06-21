@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>PW Gen</title>
+	</head>
+	<style>
+	body{padding:30px;}
+	input[type="text"]
+	{
+		font-family:monospace;
+		width:200px;
+		border: 1px solid #666;
+		padding: 5px;
+	}
+	.small{
+		font-size: 0.8em;
+	}
+	</style>
+<body>
+A strong PW: <input type="text" id="spw" readonly> <button id="copySPW">STOP</button><br>
+<span class="small">Move the cursor to make it more random.</span>
+<script>
+  /* 
+    Don't take this too seriously. It is good for randomly strong passwords, but if security is important (and it should be) 
+    you should check against known leaked password databases, and you should also store a salted hash of every password that is 
+    generated and used, so that it is not accidentally generated and used again. Unique passwords are important in every system.
+
+    This is a better version of the pw generator I used here: https://github.com/akosnikhazy/self-contained-encrypter1.1
+    There is now way to check pw repeate on a local, offline thing like this, so it is what it is.
+  */
+	"use strict";
+	function makePW(l) {
+		
+		let result		= '';
+		
+		let chars = ['abcdefghijklmnopqrstuvwxyz',
+					 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+					 '0123456789',
+					 '&@$#%!?=+-_'];
+		let e = window.event;
+		let mouseSeed = "";
+		if(e !== undefined){
+			mouseSeed = ((Math.floor(Math.random() * 4)+1) * e.clientX * e.clientY).toString(); // yea
+		}
+		let what  = 0;
+		
+		while(result.length <= l-mouseSeed.length-1){
+			what = Math.floor(Math.random() * 4); // select character category
+			result += chars[what].charAt(Math.floor(Math.random() * chars[what].length)); // select random character from category
+		}
+
+    // adding mouseSeed if any and shuffle 
+		result = (result + mouseSeed).split('').sort(() => 0.5 - Math.random()).join('');
+	
+		return result;
+	}
+	
+	var spw = document.getElementById('spw');
+	var copySPWreset = document.getElementById('copySPWreset');
+	var generatePW = true;
+	var stopBtn = document.getElementById('copySPW');
+	
+	setInterval(function () {
+		if(generatePW) spw.value = makePW(25);
+	},100);
+	
+	stopBtn.addEventListener("click",function(){
+		
+		if(!generatePW) location.reload(); // cheap
+		
+		generatePW = false;
+		spw.focus();
+		spw.select();
+		
+		stopBtn.innerHTML = "RESTART";
+		
+	});
+
+	document.addEventListener("mousemove",function(){
+		if(generatePW) spw.value = makePW(25);
+	});
+
+	document.addEventListener("keypress", function(){
+		if(generatePW) spw.value = makePW(25);
+	});
+
+</script>
+</body>
+</html>
