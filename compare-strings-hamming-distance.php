@@ -56,7 +56,7 @@ function compareString(string $str1,string $str2, bool $normalize = false)
     
     if($normalize) return (1-0)/(strlen($bins[0]) - 0) * ($hammingDistance + (strlen($bins[0])-strlen($bins[1])) - strlen($bins[0])) + 1;
 
-    // add the length difference between the two string, as ever non existent
+    // add the length difference between the two string, as every non existent
     // bit is different than any existing one. 
     return $hammingDistance + (strlen($bins[0])-strlen($bins[1]));
 }
