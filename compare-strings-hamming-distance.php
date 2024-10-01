@@ -13,6 +13,8 @@
  * Normalize mode:
  * if normalize is true it will return a number between 0 and 1 where 0 is still means no difference and 1 would mean
  * infinite difference (the closer it is to 1 the bigger the difference)
+ *
+ * What is this good for? I do not know. I just wanted to make it.
 */
 function compareString(string $str1,string $str2, bool $normalize)
 {
