@@ -16,7 +16,7 @@
  *
  * What is this good for? I do not know. I just wanted to make it.
 */
-function compareString(string $str1,string $str2, bool $normalize)
+function compareString(string $str1,string $str2, bool $normalize = false)
 {
     // they are the same, why work more?
     if($str1 === $str2) return 0;
