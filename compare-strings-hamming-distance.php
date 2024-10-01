@@ -4,7 +4,7 @@
  * 0 means it is the same string
  * Anything greater than zero represents different levels of difference. For example, 'monkey' and 'monkay' gives 1 because 
  * there is 1 bit of difference between them, while 'monkey' vs. 'duck' gives 22 because they are very different words.
- * 
+ *                                                  ˇ
  * monkey: 01101101 01101111 01101110 01101011 01100101 01111001 00001010
  * monkay: 01101101 01101111 01101110 01101011 01100001 01111001 00001010
  *                                                  ^
