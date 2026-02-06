@@ -1,0 +1,2 @@
+To have fast access to ¯\_(ツ)_/¯ ASCI emoji just put this in your browers search bar, you can even bookmark it for the fast access. 
+data:text/html,<meta charset="utf-8"><font size=10>%C2%AF\_(%E3%83%84)_/%C2%AF
